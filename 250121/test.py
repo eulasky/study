@@ -1,0 +1,3 @@
+student = []
+
+print(student)
