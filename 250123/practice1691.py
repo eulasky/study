@@ -325,15 +325,21 @@ def create_user(user_data):
     for user in user_data:
         check = is_validation(user)
         if check[0] == False:
-            for user_check in check[1]:
-                user[user_check] = None
+            if type(check[1]) == str:
+                user[check[1]] = None
                 user_list.append(user)
-            False_cnt += 1
+                False_cnt += 1
+            else:
+                for user_check in check[1]:
+                    user[user_check] = None
+                user_list.append(user)
+                False_cnt += 1
         elif check[0] == 'blocked':
             False_cnt += 1
         else:
             user_list.append(user)
         
     print(f'잘못된 데이터로 구성된 유저의 수는 {False_cnt}입니다.')
+    return user_list
         
 print(create_user(user_data))
