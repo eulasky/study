@@ -6,5 +6,3 @@ def capitalize_words(str1):
 result = capitalize_words("hello, world!")
 print(result)
 
-result2 = capitalize_words("hello, world, ff sf , fwers")
-print(result2)

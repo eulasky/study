@@ -6,13 +6,15 @@ print(person)
 # get
 person = {'name': 'Alice', 'age': 25}
 print(person.get('name'))
-print(person.get('country'))
-print(person.get('country', 'Unknown'))
+print(person['name'])
+print(person.get('country')) # None
+print(person['country']) # KeyError : 'country'
+print(person.get('country', 'Unknown')) # 없으면 'Unknown'
 # print(person['country'])  # KeyError: 'country'
 
 # keys
 person = {'name': 'Alice', 'age': 25}
-print(person.keys())  # dict_keys(['name', 'age'])
+print(person.keys())  # dict_keys(['name', 'age']) 
 for item in person.keys():
     print(item)
 

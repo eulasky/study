@@ -13,7 +13,7 @@ arr = []
 
 for char in original_word:
     arr.extend([char])
-print(arr)
+print(arr) ### 이렇게 하지말고 list(original_word) 하면 해체체
 
 result = restructure_word(word, arr)
 print(result)

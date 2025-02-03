@@ -26,7 +26,7 @@ print(element)
 my_set = {'a', 'b', 'c', 1, 2, 3}
 my_set.discard(2)
 print(my_set)
-my_set.discard(10)
+my_set.discard(10) # Error 없음
 
 # update
 my_set = {'a', 'b', 'c', 1, 2, 3}

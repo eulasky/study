@@ -14,11 +14,11 @@ print(my_set)
 
 # 문자열
 my_str_set = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j'}
-# print(my_str_set.pop())
-# print(my_str_set.pop())
-# print(my_str_set.pop())
-# print(my_str_set.pop())
-# print(my_str_set.pop())
+print(my_str_set.pop())
+print(my_str_set.pop())
+print(my_str_set.pop())
+print(my_str_set.pop())
+print(my_str_set.pop())
 
 print(hash(1))
 print(hash(1))
