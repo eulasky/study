@@ -13,7 +13,7 @@ class ParentB:
     def __init__(self):
         self.value_b = 'ParentB'
 
-    def show_value(self):
+    def show_value_2(self):
         print(f'Value from ParentB: {self.value_b}')
 
 
@@ -34,12 +34,12 @@ Value from ParentA: ParentA
 Value from Child: Child
 """
 
-print(child.value_c)  # Child
-print(child.value_a)  # ParentA
-print(
-    child.value_b
-)  # AttributeError: 'Child' object has no attribute 'value_b'
-
+# print(child.value_c)  # Child
+# print(child.value_a)  # ParentA
+# print(
+#     child.value_b
+# )  # AttributeError: 'Child' object has no attribute 'value_b'
+# child.show_value_2()
 
 """
 <ParentA에 super().__init__()를 추가하면?>
