@@ -39,6 +39,11 @@ for test_case in range(1, T+1):
 
         N -= 1
 
+    if count[max_idx] == 0:
+        max_idx -= 1
+    if count[min_idx] == 0:
+        min_idx -= 1
+
     result = max_idx - min_idx
 
     print(f'#{test_case} {result}')
