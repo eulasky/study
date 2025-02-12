@@ -3,7 +3,7 @@ for _ in range(T):
     tc = int(input())
     ladder = [list(map(int, input().split())) for _ in range(100)]
 
-    min_cnt = 0
+    min_cnt = 0 ### 이거라 틀림림
     for col in range(100):
         if ladder[0][col] == 1:
             cnt = 0
