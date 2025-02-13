@@ -10,8 +10,7 @@ for tc in range(1, T + 1):
         sort[cr] += 1
 
     min_dif = 100000
-    min_sml = [0] * 3
-    for i in range(2, len(sort) - 1):
+    for i in range(1, len(sort) - 1):
         for j in range(i + 1, len(sort)):
             s_cnt = 0
             m_cnt = 0
@@ -23,18 +22,16 @@ for tc in range(1, T + 1):
             for l in range(j, len(sort)):
                 l_cnt += sort[l]
 
+            if max(s_cnt, m_cnt, l_cnt) > N//2 or 0 == min(s_cnt, m_cnt, l_cnt):
+                continue
+
             cur_min = min(s_cnt, m_cnt, l_cnt)
             cur_max = max(s_cnt, m_cnt, l_cnt)
             cur_dif = cur_max - cur_min
 
             if min_dif > cur_dif:
                 min_dif = cur_dif
-                min_sml[0] = s_cnt
-                min_sml[1] = m_cnt
-                min_sml[2] = l_cnt
-
-    if max(min_sml) > N//2:
+    if min_dif == 100000:
         print(f'#{tc} {-1}')
-
     else:
         print(f'#{tc} {min_dif}')
