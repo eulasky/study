@@ -6,7 +6,7 @@ def don(k, s):
         return
 
     don(k+1, s)
-    if k+time[k] <= N:
+    if k+time[k] <= N+1:
         don(k+time[k], s+cash[k])
 
 N = int(input())
