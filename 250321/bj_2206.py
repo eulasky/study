@@ -31,13 +31,13 @@ def bfs(i, j, check):
                     q.append((ni, nj, 1))
                     visited[ni][nj][1] = visited[ci][cj][1] + 1
 
-    # result = min(visited[N-1][M-1])
-    # if result == INF:
-    #     result = -1
-    #
-    # return result
-    result = min(-visited[-1][-1][0], -visited[-1][-1][1], -1)
-    return -result if result >= 0 else result
+    result = min(visited[N-1][M-1])
+    if result == INF:
+        result = -1
+
+    return result
+    # result = min(-visited[-1][-1][0], -visited[-1][-1][1], -1)
+    # return -result if result >= 0 else result
 
 N, M = map(int, input().split())
 maps = [list(map(int, input())) for _ in range(N)]
